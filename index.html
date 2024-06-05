@@ -1,188 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Tienda de ropa</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body class="untref-content" style="max-width: 1200px">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body class="untref-content" style="max-width: 1200px">
     <!-- Sidebar/menu -->
-    <nav
-      class="untref-sidebar untref-bar-block untref-white untref-collapse untref-top"
-      style="z-index: 3; width: 250px"
-      id="mySidebar"
-    >
-      <div class="untref-container untref-display-container untref-padding-16">
-        <i
-          onclick="untref_close()"
-          class="fa fa-remove untref-hide-large untref-button untref-display-topright"
-        ></i>
-        <h3 class="untref-wide"><b>UNTREF</b></h3>
-      </div>
-      <div
-        class="untref-padding-64 untref-large untref-text-grey"
-        style="font-weight: bold"
-      >
-        <a href="#" class="untref-bar-item untref-button">Shirts</a>
-        <a href="#" class="untref-bar-item untref-button">Dresses</a>
-        <a
-          onclick="myAccFunc()"
-          href="javascript:void(0)"
-          class="untref-button untref-block untref-white untref-left-align"
-          id="myBtn"
-        >
-          Jeans <i class="fa fa-caret-down"></i>
-        </a>
-        <div
-          id="demoAcc"
-          class="untref-bar-block untref-hide untref-padding-large untref-medium"
-        >
-          <a href="#" class="untref-bar-item untref-button untref-light-grey"
-            ><i class="fa fa-caret-right untref-margin-right"></i>Skinny</a
-          >
-          <a href="#" class="untref-bar-item untref-button">Relaxed</a>
-          <a href="#" class="untref-bar-item untref-button">Bootcut</a>
-          <a href="#" class="untref-bar-item untref-button">Straight</a>
+    <nav class="untref-sidebar untref-bar-block untref-white untref-collapse untref-top"
+        style="z-index: 3; width: 250px" id="mySidebar">
+        <div class="untref-container untref-display-container untref-padding-16">
+            <i onclick="untref_close()"
+                class="fa fa-remove untref-hide-large untref-button untref-display-topright"></i>
+            <h3 class="untref-wide"><b>UNTREF</b></h3>
         </div>
-        <a href="#" class="untref-bar-item untref-button">Jackets</a>
-        <a href="#" class="untref-bar-item untref-button">Gymwear</a>
-        <a href="#" class="untref-bar-item untref-button">Blazers</a>
-        <a href="#" class="untref-bar-item untref-button">Shoes</a>
-      </div>
-      <a href="#footer" class="untref-bar-item untref-button untref-padding"
-        >Contact</a
-      >
-      <a
-        href="javascript:void(0)"
-        class="untref-bar-item untref-button untref-padding"
-        onclick="document.getElementById('newsletter').style.display='block'"
-        >Newsletter</a
-      >
-      <a href="#footer" class="untref-bar-item untref-button untref-padding"
-        >Subscribe</a
-      >
+        <div class="untref-padding-64 untref-large untref-text-grey" style="font-weight: bold">
+            <a href="#" class="untref-bar-item untref-button">Shirts</a>
+            <a href="#" class="untref-bar-item untref-button">Dresses</a>
+            <a onclick="myAccFunc()" href="javascript:void(0)"
+                class="untref-button untref-block untref-white untref-left-align" id="myBtn">
+                Jeans <i class="fa fa-caret-down"></i>
+            </a>
+            <div id="demoAcc" class="untref-bar-block untref-hide untref-padding-large untref-medium">
+                <a href="#" class="untref-bar-item untref-button untref-light-grey"><i
+                        class="fa fa-caret-right untref-margin-right"></i>Skinny</a>
+                <a href="#" class="untref-bar-item untref-button">Relaxed</a>
+                <a href="#" class="untref-bar-item untref-button">Bootcut</a>
+                <a href="#" class="untref-bar-item untref-button">Straight</a>
+            </div>
+            <a href="#" class="untref-bar-item untref-button">Jackets</a>
+            <a href="#" class="untref-bar-item untref-button">Gymwear</a>
+            <a href="#" class="untref-bar-item untref-button">Blazers</a>
+            <a href="#" class="untref-bar-item untref-button">Shoes</a>
+        </div>
+
+
+        <a href="javascript:void(0)" class="untref-bar-item untref-button untref-padding">
     </nav>
 
     <!-- Top menu on small screens -->
-    <header
-      class="untref-bar untref-top untref-hide-large untref-black untref-xlarge"
-    >
-      <div class="untref-bar-item untref-padding-24 untref-wide">UNTREF</div>
-      <a
-        href="javascript:void(0)"
-        class="untref-bar-item untref-button untref-padding-24 untref-right"
-        onclick="untref_open()"
-        ><i class="fa fa-bars"></i
-      ></a>
+    <header class="untref-bar untref-top untref-hide-large untref-black untref-xlarge">
+        <div class="untref-bar-item untref-padding-24 untref-wide">UNTREF</div>
+        <a href="javascript:void(0)" class="untref-bar-item untref-button untref-padding-24 untref-right"
+            onclick="untref_open()"><i class="fa fa-bars"></i></a>
     </header>
 
     <!-- Overlay effect when opening sidebar on small screens -->
-    <div
-      class="untref-overlay untref-hide-large"
-      onclick="untref_close()"
-      style="cursor: pointer"
-      title="close side menu"
-      id="myOverlay"
-    ></div>
+    <div class="untref-overlay untref-hide-large" onclick="untref_close()" style="cursor: pointer"
+        title="close side menu" id="myOverlay"></div>
 
     <!-- !PAGE CONTENT! -->
     <main class="untref-main" style="margin-left: 250px">
-      <!-- Push down content on small screens -->
-      <div class="untref-hide-large" style="margin-top: 83px"></div>
+        <!-- Push down content on small screens -->
+        <div class="untref-hide-large" style="margin-top: 83px"></div>
 
-      <!-- Top header -->
-      <header class="untref-container untref-xlarge">
-        <p class="untref-left">Jeans</p>
-        <p class="untref-right">
-          <i class="fa fa-shopping-cart untref-margin-right"></i>
-          <i class="fa fa-search"></i>
-        </p>
-      </header>
+        <!-- Top header -->
+        <header class="untref-container untref-xlarge">
+            <p class="untref-left">Jeans</p>
+            <p class="untref-right">
+                <i class="fa fa-shopping-cart untref-margin-right"></i>
+                <i class="fa fa-search"></i>
+            </p>
+        </header>
 
-      <!-- Image header -->
-      <section class="untref-display-container untref-container">
-        <img src="./img/jeans.png" alt="Jeans" style="width: 100%" />
-        <div
-          class="untref-display-topleft untref-text-white"
-          style="padding: 24px 48px"
-        >
-          <h1 class="untref-jumbo untref-hide-small">New arrivals</h1>
-          <h1 class="untref-hide-large untref-hide-medium">New arrivals</h1>
-          <h1 class="untref-hide-small">COLLECTION 2024</h1>
-          <p>
-            <a
-              href="#jeans"
-              class="untref-button untref-black untref-padding-large untref-large"
-              >SHOP NOW</a
-            >
-          </p>
+        <!-- Image header -->
+        <section class="untref-display-container untref-container">
+            <img src="./img/jeans.png" alt="Jeans" style="width: 100%" />
+            <div class="untref-display-topleft untref-text-white" style="padding: 24px 48px">
+                <h1 class="untref-jumbo untref-hide-small">New arrivals</h1>
+                <h1 class="untref-hide-large untref-hide-medium">New arrivals</h1>
+                <h1 class="untref-hide-small">COLLECTION 2024</h1>
+                <p>
+                    <a href="#jeans" class="untref-button untref-black untref-padding-large untref-large">SHOP NOW</a>
+                </p>
+            </div>
+        </section>
+
+        <div class="untref-container untref-text-grey" id="jeans">
+            <p>8 items</p>
         </div>
-      </section>
 
-      <div class="untref-container untref-text-grey" id="jeans">
-        <p>8 items</p>
-      </div>
+        <!-- TODO: STOCK PRODUCTOS-->
+        <section>
+            <div class="main-image">
+                <!-- Aquí puedes colocar una imagen principal si lo deseas -->
+            </div>
+            <div class="product-gallery">
+                <div class="gallery-item">
+                    <img src="img/jeans1.png" alt="Image 1">
+                    <div class="caption">
+                        <span class="product-description">Ripped Skinny Jeans</span><br>
+                        <span class="price"><b>$24.99</b></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/jeans2.png" alt="Image 2">
+                    <div class="caption">
+                        <span class="product-description">Mega Ripped Jeans</span><br>
+                        <span class="price"><b>$19.99</b></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/jeans3.png" alt="Image 3">
+                    <div class="caption">
+                        <span class="product-description">Washed Skinny Jeans</span><br>
+                        <span class="price"><b>$20.50</b></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/jeans4.png" alt="Image 4">
+                    <div class="caption">
+                        <span class="product-description">Vintage Skinny Jeans</span><br>
+                        <span class="price"><b>$14.99</b></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/jeans2.png" alt="Image 5">
+                    <div class="caption">
+                        <span class="product-description">Mega Ripped Jeans</span><br>
+                        <span class="price"><b>$19.99</b></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/jeans3.png" alt="Image 6">
+                    <div class="caption">
+                        <span class="product-description">Washed Skinny Jeans</span><br>
+                        <span class="price"><b>$20.50</b></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/jeans4.png" alt="Image 7">
+                    <div class="caption">
+                        <span class="product-description">Vintage Skinny Jeans</span><br>
+                        <span class="price"><b>$14.99</b></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/jeans1.png" alt="Image 8">
+                    <div class="caption">
+                        <span class="product-description">Ripped Skinny Jeans</span><br>
+                        <span class="price"><b>$24.99</b></span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <!-- TODO: Product grid -->
+        <!-- TODO: SECTOR SUSCRIBIRSE -->
+        <div class="subscribe-section">
+            <p class="subscribe-text">Subscribe</p>
+            <p class="subscribe-subtext">To get special offers and VIP treatment:</p>
+            <div class="subscribe-input-container">
+                <input type="email" placeholder="Enter e-mail">
+            </div>
+            <button class="subscribe-button">Subscribe</button>
+        </div>
 
-      <!-- TODO: Subscribe section -->
-
-      <!-- TODO: Footer -->
-
-      <div class="untref-black untref-center untref-padding-24">
-        Powered by
-        <u>UNTREF</u>
-      </div>
-
-      <!-- End page content -->
+        <!-- Pie de página -->
+        <footer>
+            <div class="footer-container">
+                <div class="contact">
+                    <h3>Contact</h3>
+                    <p>Questions? Go ahead.</p>
+                    <form>
+                        <input type="text" placeholder="Name" name="name" required>
+                        <input type="email" placeholder="Email" name="email" required>
+                        <input type="text" placeholder="Subject" name="subject" required>
+                        <textarea placeholder="Message" name="message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="about">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">We're hiring</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Find store</a></li>
+                        <li><a href="#">Shipment</a></li>
+                        <li><a href="#">Payment</a></li>
+                        <li><a href="#">Gift card</a></li>
+                        <li><a href="#">Return</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+                <div class="store">
+                    <h3>Store</h3>
+                    <p>UNTREF</p>
+                    <p>0044123123</p>
+                    <p><a href="mailto:ex@mail.com">ex@mail.com</a></p>
+                    <p>We accept:</p>
+                    <p>Amex | Credit Card</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="img/snapchat.png" alt="Snapchat"></a>
+                        <a href="#"><img src="img/pinterest.png" alt="Pinterest"></a>
+                        <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Powered by UNTREF</p>
+            </div>
+        </footer>
     </main>
+</body>
 
-    <!-- Newsletter Modal -->
-    <section id="newsletter" class="untref-modal">
-      <div
-        class="untref-modal-content untref-animate-zoom"
-        style="padding: 32px"
-      >
+</html>
+
+
+<!-- End page content -->
+</main>
+
+<!-- Newsletter Modal -->
+<section id="newsletter" class="untref-modal">
+    <div class="untref-modal-content untref-animate-zoom" style="padding: 32px">
         <div class="untref-container untref-white untref-center">
-          <i
-            onclick="document.getElementById('newsletter').style.display='none'"
-            class="fa fa-remove untref-right untref-button untref-transparent untref-xxlarge"
-          ></i>
-          <h2 class="untref-wide">NEWSLETTER</h2>
-          <p>
-            Join our mailing list to receive updates on new arrivals and special
-            offers.
-          </p>
-          <p>
-            <input
-              class="untref-input untref-border"
-              type="text"
-              placeholder="Enter e-mail"
-            />
-          </p>
-          <button
-            type="button"
-            class="untref-button untref-padding-large untref-red untref-margin-bottom"
-            onclick="document.getElementById('newsletter').style.display='none'"
-          >
-            Subscribe
-          </button>
+            <i onclick="document.getElementById('newsletter').style.display='none'"
+                class="fa fa-remove untref-right untref-button untref-transparent untref-xxlarge"></i>
+            <h2 class="untref-wide">NEWSLETTER</h2>
+            <p>
+                Join our mailing list to receive updates on new arrivals and special offers.
+            </p>
+            <p>
+                <input class="untref-input untref-border" type="text" placeholder="Enter e-mail" />
+            </p>
+            <button type="button" class="untref-button untref-padding-large untref-red untref-margin-bottom"
+                onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
         </div>
-      </div>
-    </section>
-    <script src="./js/script.js"></script>
-  </body>
+    </div>
+</section>
+<script src="./js/script.js"></script>
+</body>
+
 </html>
