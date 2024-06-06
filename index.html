@@ -9,12 +9,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+       
+        @media (min-width: 1024px) {
+            .untref-sidebar {
+                width: 250px;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+
+            .untref-sidebar {
+                width: 200px;
+            }
+        }
+        @media (max-width: 767px) {
+            .untref-sidebar {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body class="untref-content" style="max-width: 1200px">
-    <!-- Sidebar/menu -->
-    <nav class="untref-sidebar untref-bar-block untref-white untref-collapse untref-top"
-        style="z-index: 3; width: 250px" id="mySidebar">
+    <nav class="untref-sidebar untref-bar-block untref-white untref-collapse untref-top" id="mySidebar">
         <div class="untref-container untref-display-container untref-padding-16">
             <i onclick="untref_close()"
                 class="fa fa-remove untref-hide-large untref-button untref-display-topright"></i>
@@ -44,23 +61,23 @@
         <a href="javascript:void(0)" class="untref-bar-item untref-button untref-padding">
     </nav>
 
-    <!-- Top menu on small screens -->
+    
     <header class="untref-bar untref-top untref-hide-large untref-black untref-xlarge">
         <div class="untref-bar-item untref-padding-24 untref-wide">UNTREF</div>
         <a href="javascript:void(0)" class="untref-bar-item untref-button untref-padding-24 untref-right"
             onclick="untref_open()"><i class="fa fa-bars"></i></a>
     </header>
 
-    <!-- Overlay effect when opening sidebar on small screens -->
+   
     <div class="untref-overlay untref-hide-large" onclick="untref_close()" style="cursor: pointer"
         title="close side menu" id="myOverlay"></div>
 
-    <!-- !PAGE CONTENT! -->
+    
     <main class="untref-main" style="margin-left: 250px">
-        <!-- Push down content on small screens -->
+        
         <div class="untref-hide-large" style="margin-top: 83px"></div>
 
-        <!-- Top header -->
+        
         <header class="untref-container untref-xlarge">
             <p class="untref-left">Jeans</p>
             <p class="untref-right">
@@ -69,7 +86,7 @@
             </p>
         </header>
 
-        <!-- Image header -->
+        
         <section class="untref-display-container untref-container">
             <img src="./img/jeans.png" alt="Jeans" style="width: 100%" />
             <div class="untref-display-topleft untref-text-white" style="padding: 24px 48px">
@@ -89,7 +106,6 @@
         <!-- TODO: STOCK PRODUCTOS-->
         <section>
             <div class="main-image">
-                <!-- Aquí puedes colocar una imagen principal si lo deseas -->
             </div>
             <div class="product-gallery">
                 <div class="gallery-item">
@@ -151,66 +167,66 @@
             </div>
         </section>
 
-        <!-- TODO: SECTOR SUSCRIBIRSE -->
-        <div class="subscribe-section">
-            <p class="subscribe-text">Subscribe</p>
-            <p class="subscribe-subtext">To get special offers and VIP treatment:</p>
-            <div class="subscribe-input-container">
-                <input type="email" placeholder="Enter e-mail">
-            </div>
-            <button class="subscribe-button">Subscribe</button>
-        </div>
+<!-- TODO: SECTOR SUSCRIBIRSE -->
+<div class="subscribe-section">
+    <p class="subscribe-text">Subscribe</p>
+    <p class="subscribe-subtext">To get special offers and VIP treatment:</p>
+    <div class="subscribe-input-container">
+        <input type="email" placeholder="Enter e-mail">
+    </div>
+    <button class="subscribe-button">Subscribe</button>
+</div>
 
-        <!-- Pie de página -->
-        <footer>
-            <div class="footer-container">
-                <div class="contact">
-                    <h3>Contact</h3>
-                    <p>Questions? Go ahead.</p>
-                    <form>
-                        <input type="text" placeholder="Name" name="name" required>
-                        <input type="email" placeholder="Email" name="email" required>
-                        <input type="text" placeholder="Subject" name="subject" required>
-                        <textarea placeholder="Message" name="message" required></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-                <div class="about">
-                    <h3>About</h3>
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">We're hiring</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Find store</a></li>
-                        <li><a href="#">Shipment</a></li>
-                        <li><a href="#">Payment</a></li>
-                        <li><a href="#">Gift card</a></li>
-                        <li><a href="#">Return</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul>
-                </div>
-                <div class="store">
-                    <h3>Store</h3>
-                    <p>UNTREF</p>
-                    <p>0044123123</p>
-                    <p><a href="mailto:ex@mail.com">ex@mail.com</a></p>
-                    <p>We accept:</p>
-                    <p>Amex | Credit Card</p>
-                    <div class="social-icons">
-                        <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
-                        <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
-                        <a href="#"><img src="img/snapchat.png" alt="Snapchat"></a>
-                        <a href="#"><img src="img/pinterest.png" alt="Pinterest"></a>
-                        <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
-                        <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
-                    </div>
-                </div>
+<!-- TODO: PIE DE PAGINA -->
+<footer>
+    <div class="footer-container">
+        <div class="contact">
+            <h3>Contact</h3>
+            <p>Questions? Go ahead.</p>
+            <form>
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="text" placeholder="Subject" name="subject" required>
+                <textarea placeholder="Message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="about">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">We're hiring</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Find store</a></li>
+                <li><a href="#">Shipment</a></li>
+                <li><a href="#">Payment</a></li>
+                <li><a href="#">Gift card</a></li>
+                <li><a href="#">Return</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div class="store">
+            <h3>Store</h3>
+            <p><img src="img/ubi.png" alt="Location"> UNTREF</p>
+            <p><img src="img/telefono.png" alt="Phone"> 0044123123</p>
+            <p><img src="img/correo.png" alt="Email"><a href="mailto:ex@mail.com" class="email-link"> ex@mail.com</a></p>
+            <h3>We Accept:</h3>
+            <p><img src="img/tarjeta.png" alt="Amex"> Amex</p>
+            <p><img src="img/credit.png" alt="Credit Card"> Credit Card</p>
+            <div class="social-icons">
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="img/snapchat.png" alt="Snapchat"></a>
+                <a href="#"><img src="img/pinterest.png" alt="Pinterest"></a>
+                <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
             </div>
-            <div class="footer-bottom">
-                <p>Powered by UNTREF</p>
-            </div>
-        </footer>
-    </main>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Powered by UNTREF</p>
+    </div>
+</footer>
 </body>
 
 </html>
